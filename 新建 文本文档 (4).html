@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贾肆喧阗 商通九陌 - 象山白岩市集 | 乡村振兴示范项目</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS变量定义 */
+        :root {
+            --primary-blue: #0a1f3a;
+            --secondary-blue: #1a3a5f;
+            --accent-blue: #4da6ff;
+            --neon-blue: #00f3ff;
+            --dark-blue: #0066cc;
+            --deep-blue: #004d99;
+            --text-light: #e6f7ff;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+            --shadow-hover: 0 10px 30px rgba(0, 243, 255, 0.5);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --border-radius: 12px;
+        }
+
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: var(--neon-blue);
+            margin-bottom: 3.5rem;
+            position: relative;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background: rgba(10, 31, 58, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .nav-logo {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .nav-logo h2 {
+            color: var(--neon-blue);
+            font-size: 1.8rem;
+            margin-bottom: 2px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .nav-logo span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1.05rem;
+            padding: 5px 0;
+        }
+
+        .nav-menu a:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: linear-gradient(90deg, var(--dark-blue), var(--neon-blue));
+            color: var(--primary-blue);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover::before {
+            left: 100%;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 243, 255, 0.6);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            cursor: pointer;
+        }
+
+        /* Hero区域样式 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(rgba(10, 31, 58, 0.7), rgba(10, 31, 58, 0.9)), 
+                        url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 24px;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 4.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.7);
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                text-shadow: 0 0 20px rgba(0, 243, 255, 0.7);
+            }
+            100% {
+                text-shadow: 0 0 30px rgba(0, 243, 255, 1), 0 0 40px rgba(0, 243, 255, 0.5);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button {
+            background: linear-gradient(90deg, var(--dark-blue), var(--neon-blue));
+            color: var(--primary-blue);
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: var(--transition);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 243, 255, 0.6);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--neon-blue);
+            color: var(--primary-blue);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: var(--neon-blue);
+            font-size: 0.9rem;
+            z-index: 2;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid var(--neon-blue);
+            border-bottom: 2px solid var(--neon-blue);
+            transform: rotate(45deg);
+            margin: 10px auto;
+            animation: bounce 2s infinite;
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: rotate(45deg) translateY(0); }
+            50% { transform: rotate(45deg) translateY(-10px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 项目概述区域样式 */
+        .overview {
+            background: var(--primary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="%2300f3ff" opacity="0.05"/></svg>');
+            background-size: cover;
+            animation: waveMove 15s linear infinite;
+        }
+
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .overview-text h2 {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .overview-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .overview-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            height: 400px;
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .overview-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* 项目总览区域样式 */
+        .project-overview {
+            background: var(--secondary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-overview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="%2300f3ff" opacity="0.05"/></svg>');
+            background-size: cover;
+            animation: waveMove 25s linear infinite;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .overview-card {
+            background: rgba(10, 31, 58, 0.8);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+
+        .overview-icon {
+            font-size: 3rem;
+            color: var(--neon-blue);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .overview-card h3 {
+            color: var(--neon-blue);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .overview-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* 项目亮点区域样式 - 2x2布局 */
+        .highlights {
+            background: var(--primary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlights::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,160C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" fill="%2300f3ff" opacity="0.05"/></svg>');
+            background-size: cover;
+            animation: waveMove 20s linear infinite reverse;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .highlight-card {
+            background: rgba(10, 31, 58, 0.8);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            transform: translateY(30px);
+            opacity: 0;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .highlight-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+
+        .highlight-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .highlight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .highlight-card:hover .highlight-image img {
+            transform: scale(1.1);
+        }
+
+        .highlight-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .highlight-content h3 {
+            color: var(--neon-blue);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .highlight-content p {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            flex-grow: 1;
+        }
+
+        .highlight-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .highlight-tags span {
+            background: rgba(0, 243, 255, 0.2);
+            color: var(--neon-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+        }
+
+        /* 运营策略区域样式 */
+        .operations {
+            background: var(--secondary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .operations::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="%2300f3ff" opacity="0.05"/></svg>');
+            background-size: cover;
+            animation: waveMove 25s linear infinite;
+        }
+
+        .operations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .operation-card {
+            background: rgba(10, 31, 58, 0.8);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .operation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+
+        .operation-icon {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .operation-card h3 {
+            color: var(--neon-blue);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .operation-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .operation-features {
+            list-style-type: none;
+        }
+
+        .operation-features li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .operation-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
+
+        /* 项目成果区域 */
+        .achievements {
+            background: var(--primary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievements::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,160C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" fill="%2300f3ff" opacity="0.05"/></svg>');
+            background-size: cover;
+            animation: waveMove 20s linear infinite reverse;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .achievement-card {
+            background: rgba(10, 31, 58, 0.8);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+
+        .achievement-icon {
+            font-size: 3rem;
+            color: var(--neon-blue);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .achievement-text {
+            font-size: 1rem;
+            color: var(--text-light);
+            opacity: 0.9;
+        }
+
+        /* 核心团队区域样式 - 无图片，纯文字详细描述 */
+        .team {
+            background: var(--secondary-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="%2300f3ff" opacity="0.05"/></svg>');
+            background-size: cover;
+            animation: waveMove 25s linear infinite;
+        }
+
+        .team-subsection {
+            margin-bottom: 5rem;
+        }
+
+        .team-subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .team-subtitle {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--neon-blue);
+            margin-bottom: 3rem;
+            position: relative;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .team-subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .team-card {
+            background: rgba(10, 31, 58, 0.8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            transition: var(--transition);
+            position: relative;
+            transform: translateY(30px);
+            opacity: 0;
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+        }
+
+        .team-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--neon-blue));
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .team-card:hover {
+            border-color: rgba(0, 243, 255, 0.5);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .team-content h3 {
+            color: var(--neon-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .team-role {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .team-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+
+        .team-achievements {
+            margin-top: 1.5rem;
+        }
+
+        .team-achievements h4 {
+            color: var(--neon-blue);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .team-achievements ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .team-achievements li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .team-achievements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
+
+        .team-skills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .team-skills span {
+            background: rgba(0, 243, 255, 0.2);
+            color: var(--neon-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+        }
+
+        /* 页脚样式 */
+        .footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 70px 0 20px;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(0, 243, 255, 0.3);
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="%2300f3ff" opacity="0.05"/></svg>');
+            background-size: cover;
+            animation: waveMove 25s linear infinite;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-info h3 {
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .footer-info p {
+            margin-bottom: 0.8rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.8rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 243, 255, 0.1);
+            border-radius: 50%;
+            color: var(--neon-blue);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+        }
+
+        .social-links a:hover {
+            background: var(--neon-blue);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.7);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 243, 255, 0.1);
+            opacity: 0.8;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(90deg, var(--dark-blue), var(--neon-blue));
+            color: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.5);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 243, 255, 0.6);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .overview-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .overview-grid,
+            .operations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-info {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 31, 58, 0.95);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+                border-top: 1px solid rgba(0, 243, 255, 0.3);
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .team-subtitle {
+                font-size: 1.8rem;
+            }
+            
+            .highlights-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .overview-grid,
+            .operations-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-contact p {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .team-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .highlight-content, .team-card, .overview-card, .operation-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>贾肆喧阗 商通九陌</h2>
+                <span>象山白岩市集</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#overview">项目溯源</a></li>
+                <li><a href="#project-overview">项目总览</a></li>
+                <li><a href="#highlights">项目亮点</a></li>
+                <li><a href="#operations">运营策略</a></li>
+                <li><a href="#achievements">项目成果</a></li>
+                <li><a href="#team">核心团队</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">联系我们</a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首页Hero区域 -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">山海物产聚合<br>文化体验新生</h1>
+            <p class="hero-subtitle">象山白岩下村特色市集 - 从田间到舌尖的全链沉浸式体验，探索乡村振兴新路径</p>
+            <div class="hero-btns">
+                <button class="cta-button">探索项目</button>
+                <button class="cta-button secondary">了解更多</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>向下滚动</span>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- 项目溯源区域 -->
+    <section id="overview" class="section overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>项目溯源</h2>
+                    <p>白岩下村的市集与新生 - 二十一世纪的白岩下村，像一颗被群山温柔包裹的明珠。村民们守着祖辈传下的田垄与手艺，自给自足的日子过得安稳妥帖，唯独少了些向外生长的活力。</p>
+                    <p>农夫阿白看在眼里，心里渐渐有了主意。他瞧着村里的笋干、土布、野蜂蜜都是别处难寻的好东西，便挨家挨户劝说："咱们的宝贝藏在山里没人知，不如借着节气办个集市，让外头的人也来瞧瞧白岩下的好！"</p>
+                    <p>从山村到小镇，小小的市集就像一粒种子，落在渴望生长的土地上，便长出了经济的活力，也长出了烟火气里的人情味。</p>
+                </div>
+                <div class="overview-image">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="白岩下村风光">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目总览区域 -->
+    <section id="project-overview" class="section project-overview">
+        <div class="container">
+            <h2 class="section-title">项目总览</h2>
+            <p class="section-subtitle">象山白岩市集乡村振兴项目的整体规划与核心要素</p>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>项目目标</h3>
+                    <p>打造"农海文旅融合"的特色市集，推动白岩下村乡村振兴，实现经济、文化、生态协调发展，探索可复制、可推广的乡村振兴新模式。</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>项目定位</h3>
+                    <p>以象山海洋文化为底蕴，结合白岩下村特色资源，打造集农产品展销、文化体验、休闲旅游于一体的综合性乡村市集。</p>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>目标人群</h3>
+                    <p>面向城市居民、游客、文化爱好者、摄影爱好者等多层次消费群体，提供差异化、个性化、沉浸式的乡村体验服务。</p>
+                </div>
+                <!-- 新增项目地位卡片 -->
+                <div class="overview-card">
+                    <div class="overview-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>项目地位</h3>
+                    <p>作为浙江省乡村振兴示范项目，象山白岩市集已成为区域文旅融合发展的标杆，在推动当地经济发展和文化传承方面发挥着重要作用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目亮点区域 - 2x2布局 -->
+    <section id="highlights" class="section highlights">
+        <div class="container">
+            <h2 class="section-title">项目亮点</h2>
+            <p class="section-subtitle">白岩下村特色市集的创新模式与核心优势，为乡村振兴注入新动力</p>
+            <div class="highlights-grid">
+                <!-- 亮点1：农海文旅融合 -->
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="农海文旅融合">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>农海文旅融合</h3>
+                        <p>构建"田间到舌尖"全链沉浸式体验，打造农耕实践区、渔猎体验区、文化展示区和产品展销中心四大功能模块，实现农业、海洋与文化旅游的深度融合。</p>
+                        <div class="highlight-tags">
+                            <span>全链体验</span>
+                            <span>文化融合</span>
+                            <span>沉浸式</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 亮点2：特色文创产品 -->
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="特色文创产品">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>特色文创产品</h3>
+                        <p>开发海鲜玩偶盲盒、螃蟹手机支架、象山时令风物日历等文创产品，融合象山海洋文化与乡村特色，让游客带走的不只是纪念品，更是一份文化记忆。</p>
+                        <div class="highlight-tags">
+                            <span>文创产品</span>
+                            <span>文化传承</span>
+                            <span>创新设计</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 亮点3：多元营销策略 -->
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="多元营销策略">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>多元营销策略</h3>
+                        <p>构建"线上引流+线下转化"的多元化促销体系，聚焦抖音、小红书等年轻群体聚集的平台，结合节假日特惠活动，提升品牌知名度和客流量。</p>
+                        <div class="highlight-tags">
+                            <span>数字营销</span>
+                            <span>社交媒体</span>
+                            <span>精准触达</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 亮点4：公益计划 -->
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="公益计划">
+                    </div>
+                    <div class="highlight-content">
+                        <h3>公益计划</h3>
+                        <p>通过文化之约、反哺乡梓和助学兴教三大公益计划，推动象山非遗传扬、乡村共富践行和桃李培育助力，实现经济效益与社会效益的双赢。</p>
+                        <div class="highlight-tags">
+                            <span>非遗传承</span>
+                            <span>乡村共富</span>
+                            <span>教育支持</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 运营策略区域 -->
+    <section id="operations" class="section operations">
+        <div class="container">
+            <h2 class="section-title">运营策略</h2>
+            <p class="section-subtitle">象山白岩市集的运营模式与实施策略，确保项目可持续发展</p>
+            <div class="operations-grid">
+                <div class="operation-card">
+                    <div class="operation-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>商业模式</h3>
+                    <p>采用"平台+商户+消费者"的三方共赢模式，通过摊位租赁、产品销售、体验服务、品牌授权等多渠道实现盈利。</p>
+                    <ul class="operation-features">
+                        <li>摊位租赁收入</li>
+                        <li>产品销售分成</li>
+                        <li>体验服务收费</li>
+                        <li>文创产品授权</li>
+                        <li>品牌合作收入</li>
+                    </ul>
+                </div>
+                <div class="operation-card">
+                    <div class="operation-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>营销策略</h3>
+                    <p>构建全方位、多层次的营销体系，实现线上线下联动，提升品牌影响力和市场占有率。</p>
+                    <ul class="operation-features">
+                        <li>社交媒体矩阵营销</li>
+                        <li>KOL/KOC合作推广</li>
+                        <li>节庆活动策划</li>
+                        <li>会员体系构建</li>
+                        <li>跨界合作联动</li>
+                    </ul>
+                </div>
+                <div class="operation-card">
+                    <div class="operation-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>运营管理</h3>
+                    <p>建立科学规范的运营管理体系，确保项目高效运转和服务质量持续提升。</p>
+                    <ul class="operation-features">
+                        <li>标准化服务流程</li>
+                        <li>数字化管理系统</li>
+                        <li>商户培训体系</li>
+                        <li>质量监控机制</li>
+                        <li>客户反馈系统</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目成果区域 -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <h2 class="section-title">项目成果</h2>
+            <p class="section-subtitle">自项目启动以来取得的显著成效与数据成果</p>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-number">15万+</div>
+                    <div class="achievement-text">累计年客流量</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="achievement-number">30+</div>
+                    <div class="achievement-text">入驻商户</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="achievement-number">3800万+</div>
+                    <div class="achievement-text">累计销售额</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-number">8项</div>
+                    <div class="achievement-text">荣誉奖项</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心团队区域 - 分为指导老师和学生团队两个模块 -->
+    <section id="team" class="section team">
+        <div class="container">
+            <h2 class="section-title">核心团队</h2>
+            <p class="section-subtitle">专业团队凝聚力量，共同推动乡村振兴事业发展</p>
+            
+            <!-- 指导老师模块 -->
+            <div class="team-subsection">
+                <h3 class="team-subtitle">指导老师</h3>
+                <div class="team-grid">
+                    <!-- 指导老师 - 叶心怡 -->
+                    <div class="team-card">
+                        <div class="team-content">
+                            <h3>叶心怡</h3>
+                            <div class="team-role">项目指导老师 & 策划总监</div>
+                            <p>象山港高级技工学校市场营销专业优秀教师，项目主要负责人。拥有出色的组织协调能力和创新思维，负责整体项目规划、资源整合与团队管理。在校期间多次获得校级奖学金，参与多个创新创业项目并取得优异成绩。</p>
+                            <div class="team-achievements">
+                                <h4>主要成就</h4>
+                                <ul>
+                                    <li>主导项目整体策划与商业模式设计</li>
+                                    <li>成功协调多方资源，推动项目落地实施</li>
+                                    <li>带领团队获得2023年浙江省创新创业大赛一等奖</li>
+                                    <li>设计并实施项目营销策略，提升品牌知名度</li>
+                                </ul>
+                            </div>
+                            <div class="team-skills">
+                                <span>项目管理</span>
+                                <span>创新策划</span>
+                                <span>团队协作</span>
+                                <span>市场营销</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 指导老师 - 陈媛 -->
+                    <div class="team-card">
+                        <div class="team-content">
+                            <h3>陈媛</h3>
+                            <div class="team-role">项目指导老师 & 运营总监</div>
+                            <p>象山港高级技工学校市场营销专业教师，项目核心成员。拥有丰富的教学经验和项目指导能力，负责项目运营管理、资源协调与团队培训。多次指导学生参加创新创业大赛并取得优异成绩。</p>
+                            <div class="team-achievements">
+                                <h4>主要成就</h4>
+                                <ul>
+                                    <li>协助项目整体策划与商业模式设计</li>
+                                    <li>负责学生团队管理与培训</li>
+                                    <li>参与项目营销策略制定与实施</li>
+                                    <li>带领团队获得2023年浙江省创新创业大赛一等奖</li>
+                                </ul>
+                            </div>
+                            <div class="team-skills">
+                                <span>项目管理</span>
+                                <span>团队建设</span>
+                                <span>教学指导</span>
+                                <span>市场营销</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 学生团队模块 -->
+            <div class="team-subsection">
+                <h3 class="team-subtitle">学生团队</h3>
+                <div class="team-grid">
+                    <!-- 团队成员1 -->
+                    <div class="team-card">
+                        <div class="team-content">
+                            <h3>刘照轩</h3>
+                            <div class="team-role">技术开发与数据分析</div>
+                            <p>象山港高级技工学校信息技术专业优秀学生，负责项目数字化平台建设、数据分析和运营管理。精通多种编程语言和数据分析工具，成功开发项目线上平台和数据分析系统，提升项目运营效率。</p>
+                            <div class="team-achievements">
+                                <h4>主要成就</h4>
+                                <ul>
+                                    <li>开发项目线上预约与管理系统</li>
+                                    <li>建立数据分析模型，优化运营策略</li>
+                                    <li>设计并实施数字化营销工具</li>
+                                    <li>提升项目运营效率30%以上</li>
+                                </ul>
+                            </div>
+                            <div class="team-skills">
+                                <span>技术开发</span>
+                                <span>数据分析</span>
+                                <span>运营管理</span>
+                                <span>数字化营销</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 团队成员2 -->
+                    <div class="team-card">
+                        <div class="team-content">
+                            <h3>曾子俊</h3>
+                            <div class="team-role">市场拓展与客户关系</div>
+                            <p>象山港高级技工学校市场营销专业优秀学生，负责项目市场拓展、客户关系维护和品牌推广。拥有出色的沟通能力和市场洞察力，成功开拓多个合作渠道，提升项目市场占有率。</p>
+                            <div class="team-achievements">
+                                <h4>主要成就</h4>
+                                <ul>
+                                    <li>成功开拓10+个合作渠道</li>
+                                    <li>建立完善的客户关系管理体系</li>
+                                    <li>策划并执行多场品牌推广活动</li>
+                                    <li>提升项目市场占有率15%以上</li>
+                                </ul>
+                            </div>
+                            <div class="team-skills">
+                                <span>市场拓展</span>
+                                <span>客户关系</span>
+                                <span>品牌推广</span>
+                                <span>商务谈判</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 团队成员3 -->
+                    <div class="team-card">
+                        <div class="team-content">
+                            <h3>卓钰辉</h3>
+                            <div class="team-role">产品设计与用户体验</div>
+                            <p>象山港高级技工学校艺术设计专业优秀学生，负责项目文创产品设计、品牌形象塑造和用户体验优化。拥有出色的创意设计能力和美学素养，成功设计多款畅销文创产品，提升项目品牌价值。</p>
+                            <div class="team-achievements">
+                                <h4>主要成就</h4>
+                                <ul>
+                                    <li>设计项目品牌形象与视觉识别系统</li>
+                                    <li>开发10+款特色文创产品，累计销售额超50万元</li>
+                                    <li>优化用户体验，提升客户满意度</li>
+                                    <li>作品获得2023年浙江省文创设计大赛银奖</li>
+                                </ul>
+                            </div>
+                            <div class="team-skills">
+                                <span>创意设计</span>
+                                <span>品牌塑造</span>
+                                <span>产品开发</span>
+                                <span>用户体验</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>贾肆喧阗 商通九陌</h3>
+                    <p>象山港高级技工学校 - 乡村振兴项目</p>
+                    <p>我们致力于通过农海文旅融合，推动白岩下村乡村振兴，打造具有象山特色的乡村旅游目的地。</p>
+                    <p>地址：浙江省宁波市象山县白岩下村</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#overview">项目溯源</a></li>
+                        <li><a href="#project-overview">项目总览</a></li>
+                        <li><a href="#highlights">项目亮点</a></li>
+                        <li><a href="#operations">运营策略</a></li>
+                        <li><a href="#achievements">项目成果</a></li>
+                        <li><a href="#team">核心团队</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <p><i class="fas fa-phone"></i> 电话：13586724628</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱：xiangshan_market@example.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 地址：浙江省宁波市象山县白岩下村</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 象山白岩市集. 保留所有权利. | 设计开发: 象山港高级技工学校团队</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航链接平滑滚动
+            const navLinks = document.querySelectorAll('.nav-menu a[href^="#"], .footer-links a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                        
+                        // 移动端点击后关闭菜单
+                        if (window.innerWidth <= 768) {
+                            document.querySelector('.nav-menu').classList.remove('active');
+                        }
+                    }
+                });
+            });
+
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                const backToTop = document.querySelector('.back-to-top');
+                
+                if (window.scrollY > 100) {
+                    navbar.style.background = 'rgba(10, 31, 58, 0.98)';
+                    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
+                    backToTop.classList.add('visible');
+                } else {
+                    navbar.style.background = 'rgba(10, 31, 58, 0.95)';
+                    navbar.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.5)';
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            // CTA按钮点击事件
+            const ctaButtons = document.querySelectorAll('.cta-button');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.textContent.includes('探索')) {
+                        document.querySelector('#overview').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        document.querySelector('#project-overview').scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 滚动动画效果
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // 观察需要动画的元素
+            const animatedElements = document.querySelectorAll('.highlight-card, .team-card, .overview-card, .operation-card, .achievement-card');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // 返回顶部按钮
+            const backToTopBtn = document.querySelector('.back-to-top');
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 移动端菜单切换
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // 调整窗口大小时重新计算
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
